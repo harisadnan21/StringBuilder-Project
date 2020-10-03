@@ -87,8 +87,9 @@ Note that the benchmark code runs two experiments to average the results. So the
 
 ### Modify and Run AnalysisDNA
 
-You're given a class `AnalysisDNA` that runs one benchmark test. Modify it based on the comments in the main method so that a splicing experiment is run with a strand of DNA whose number of breaks (occurrences of restriction enzyme) increases linearly, so that 10 runs are made and timed. In the previous `DNABenchmark`, the size of the splicee changes. In this program the size is a constant, and the number of breaks changes. This will allow you to answer two questions about the runtime of `StringStrand` as being O(b<sup>2</sup>S) and `StringBuilderStrand` being O(bs) as explained in the analysis section. You should generate runs for each of these strand types as explained in the analysis section.
+You're given a class `AnalysisDNA` that runs one benchmark test. Modify it based on the comments in the main method so that a splicing experiment is run with a strand of DNA whose number of breaks (occurrences of restriction enzyme) increases linearly, so that 10 runs are made and timed **so that 10 runs are made and timed in a single run of the program**. In the previous `DNABenchmark`, the size of the splicee changes. In this program the size is a constant, and the number of breaks changes. This will allow you to answer two questions about the runtime of `StringStrand` as being O(b<sup>2</sup>S) and `StringBuilderStrand` being O(bs) as explained in the analysis section. You should generate runs for each of these strand types as explained in the analysis section.
 
+**Note: the strand used in timing experiments is a private static String mySource. You'll need to modify this in main, it's used in the timing methods.**
 
 
 
