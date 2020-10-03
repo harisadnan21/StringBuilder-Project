@@ -110,7 +110,7 @@ public class AnalysisDNA {
         // write code here that iterates 10 times
         // in each iteration the instance variable mySource, used in
         // the strandSpliceBenchmark method should be increased by copy.length()
-        // characters, by simply appending copy to myStrand each time the loop iterates
+        // characters, by simply appending copy to mySource each time the loop iterates
         // This will increase the number of breaks in mySource linearly, by the number
         // of breaks in copy
 
