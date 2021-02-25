@@ -105,12 +105,12 @@ public class AnalysisDNA {
         for (int k = 0; k < spSize; k++) {
             b.append("c");
         }
+        String copy = mySource;
         String splicee = b.toString();
         for (int j = 1; j <= 10; j++) {
             String results = strandSpliceBenchmark(ENZYME, splicee, strandType);
             System.out.println(results);
             mySource += copy;
         }
-        System.exit(0);
     }
 }
