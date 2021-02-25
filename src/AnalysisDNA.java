@@ -106,18 +106,11 @@ public class AnalysisDNA {
             b.append("c");
         }
         String splicee = b.toString();
-
-        // write code here that iterates 10 times
-        // in each iteration the instance variable mySource, used in
-        // the strandSpliceBenchmark method should be increased by copy.length()
-        // characters, by simply appending copy to mySource each time the loop iterates
-        // This will increase the number of breaks in mySource linearly, by the number
-        // of breaks in copy
-
-        String copy = mySource;
-        String results = strandSpliceBenchmark(ENZYME, splicee, strandType);
-        System.out.println(results);
-
+        for (int j = 1; j <= 10; j++) {
+            String results = strandSpliceBenchmark(ENZYME, splicee, strandType);
+            System.out.println(results);
+            mySource += copy;
+        }
         System.exit(0);
     }
 }
