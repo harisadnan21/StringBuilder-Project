@@ -22,12 +22,13 @@ public class LinkStrand implements IDnaStrand{
     private Node myFirst, myLast;
     private long mySize;
     private int myAppends;
-    private int myIndex = 0;
-    private Node myCurrent = myFirst;
-    private int myLocalIndex = 0;
+    private int myIndex;
+    private Node myCurrent;
+    private int myLocalIndex;
 
-    public String toString(Node input){
+    public String toString(){
         StringBuilder string = new StringBuilder();
+        Node input = myFirst;
 
         while(input != null){
             string.append(input.info);
@@ -50,6 +51,13 @@ public class LinkStrand implements IDnaStrand{
     @Override
     public void initialize(String source) {
 
+        myFirst = new Node(source);
+        myLast = myFirst;
+        mySize = myFirst.info.length();
+        myAppends = 0 ;
+        myIndex = 0 ;
+        myCurrent = myFirst;
+        myLocalIndex = 0;
     }
 
     @Override
@@ -69,7 +77,6 @@ public class LinkStrand implements IDnaStrand{
         Node n = new Node(s);
         n.next = myFirst;
         myFirst = n;
-        myAppends++;
         mySize = mySize + myFirst.info.length();
 
     }
@@ -81,7 +88,7 @@ public class LinkStrand implements IDnaStrand{
         while(track != null){
             StringBuilder copy = new StringBuilder(track.info);
             copy.reverse();
-            this.frontAppend(copy.toString());
+            str.frontAppend(copy.toString());
             track = track.next;
         }
         return str;
