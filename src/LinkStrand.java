@@ -73,7 +73,7 @@ public class LinkStrand implements IDnaStrand{
         myAppends++;
         return this;
     }
-    public void frontAppend(String s){
+    private void frontAppend(String s){
         Node n = new Node(s);
         n.next = myFirst;
         myFirst = n;
